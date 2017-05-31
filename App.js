@@ -36,7 +36,6 @@ class NewtonBot extends React.Component {
       var operation = command.slice(1);
       // /derive 2x -> 2x
       var expression = messageText.slice(messageText.indexOf(operation) + operation.length);
-      expression = encodeURI(expression);
 
       respond(operation, expression, callback);
   }

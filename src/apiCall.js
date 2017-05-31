@@ -17,7 +17,8 @@ let operations = {
 };
 
 export default function(operation, expression, callback){
-    fetch(`https://newton.now.sh/${operation}/${expression}`)
+    computedExpression = expression.split('/').join('(over)');
+    fetch(`https://newton.now.sh/${operation}/${computedExpression}`)
     .then((response) => response.json())
     .then((responseData) => {
         callback(`I ${operations[operation].past} ${expression} and got:\n\n${responseData.result}`);
