@@ -1,8 +1,8 @@
 import React from 'react';
 import { GiftedChat } from 'react-native-gifted-chat';
-import respond from './apiCall';
+import respond from './src/apiCall';
 let avatarImg = 'https://upload.wikimedia.org/wikipedia/commons/3/39/GodfreyKneller-IsaacNewton-1689.jpg';
-// var avatarImg = require('./img/newton.jpg');
+
 class NewtonBot extends React.Component {
   constructor(props) {
     super(props);
@@ -36,6 +36,7 @@ class NewtonBot extends React.Component {
       var operation = command.slice(1);
       // /derive 2x -> 2x
       var expression = messageText.slice(messageText.indexOf(operation) + operation.length);
+      expression = encodeURI(expression);
 
       respond(operation, expression, callback);
   }
