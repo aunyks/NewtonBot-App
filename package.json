@@ -1,5 +1,6 @@
 {
   "name": "newtonbot-app",
+  "description": "With processes of swiftness and speed, to do your math homework is my deed.",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {

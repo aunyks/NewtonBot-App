@@ -35,7 +35,7 @@ class NewtonBot extends React.Component {
       // /derive -> derive
       var operation = command.slice(1);
       // /derive 2x -> 2x
-      var expression = messageText.slice(messageText.indexOf(operation) + operation.length);
+      var expression = messageText.slice(messageText.indexOf(operation) + operation.length).trim();
 
       respond(operation, expression, callback);
   }
@@ -70,13 +70,13 @@ class NewtonBot extends React.Component {
   }
   render() {
     return (
-      <GiftedChat
-        messages={this.state.messages}
-        onSend={this.onSend}
-        user={{
-          _id: 1,
-        }}
-      />
+        <GiftedChat
+          messages={this.state.messages}
+          onSend={this.onSend}
+          user={{
+            _id: 1,
+          }}
+        />
     );
   }
 }

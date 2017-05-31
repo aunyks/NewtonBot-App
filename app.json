@@ -1,6 +1,19 @@
 {
   "expo": {
     "name": "NewtonBot",
-    "sdkVersion": "17.0.0"
+    "description": "With processes of swiftness and speed, to do your math homework is my deed.",
+    "version": "0.1.0",
+    "sdkVersion": "17.0.0",
+    "privacy": "public",
+    "primaryColor": "#0084ff",
+    "icon": "./img/newton-logo.png",
+    "loading": {
+      "icon": "./img/newton-logo.png",
+      "hideExponentText": true,
+      "backgroundColor": "#0084ff"
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content"
+    }
   }
 }
